@@ -117,6 +117,11 @@
       - `Object` error data
   - `disconnect`. Fired upon a disconnection.
 
+## Dependencies
+
+    npm install -g component
+    npm install component-coffee
+
 ## License
 
 MIT
