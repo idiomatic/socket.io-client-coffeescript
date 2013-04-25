@@ -11,10 +11,10 @@
     "visionmedia/debug": "*"
   },
   "scripts": [
-    "lib/index.coffee",
-    "lib/manager.coffee",
-    "lib/engine.coffee",
-    "lib/socket.coffee",
-    "lib/emitter.coffee"
+    "lib/index.js",
+    "lib/manager.js",
+    "lib/engine.js",
+    "lib/socket.js",
+    "lib/emitter.js"
   ]
 }

@@ -2,7 +2,7 @@
 REPORTER = dot
 
 build: components lib
-	@component build --use component-coffee --standalone eio
+	@component build --standalone eio
 	@mv build/build.js build.js
 	@rm -rf build
 	@./node_modules/.bin/uglifyjs < build.js > socket.io-client.js
