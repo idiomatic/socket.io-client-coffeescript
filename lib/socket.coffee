@@ -54,7 +54,7 @@ class Socket extends Emitter
     open: ->
         io = @io
         io.open() # ensure open
-        @onopen() if "open" is @io.readyState
+        @onopen() if @io.readyState is "open"
         @subs = [
             on_(io, "open", bind(this, "onopen")),
             on_(io, "error", bind(this, "onerror"))
@@ -92,7 +92,7 @@ class Socket extends Emitter
                 data: args
 
             # event ack callback
-            if "function" is typeof args[args.length - 1]
+            if typeof args[args.length - 1] is "function"
                 debug "emitting packet with ack id %d", @ids
                 @acks[@ids] = args.pop()
                 packet.id = @ids++
@@ -130,7 +130,7 @@ class Socket extends Emitter
         debug "transport is open - connecting"
         
         # write connect packet if necessary
-        @packet type: parser.CONNECT unless "/" is @nsp
+        @packet type: parser.CONNECT unless @nsp is "/"
         
         # subscribe
         io = @io

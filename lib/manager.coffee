@@ -244,7 +244,9 @@ class Manager extends Emitter
     ###
     cleanup: ->
         sub = undefined
-        sub.destroy() while sub = @subs.shift()
+        for sub in @subs
+            sub.destroy()
+        @subs = [ ]
 
 
     ###

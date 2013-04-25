@@ -21,8 +21,8 @@ URL parser.
 parse = (uri) ->
     obj = uri
     url = location.protocol + "//" + location.hostname if url is null
-    if "string" is typeof uri
-        uri = location.hostname + uri unless "undefined" is typeof location if "/" is uri.charAt(0)
+    if typeof uri is "string"
+        uri = location.hostname + uri unless "undefined" is typeof location if uri.charAt(0) is "/"
         
         # allow for `localhost:3000`
         unless /^(https?|wss?):\/\//.test(uri)
