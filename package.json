@@ -1,5 +1,5 @@
 {
-  "name": "socket.io-client",
+  "name": "socket.io-client-coffeescript",
   "version": "1.0.0",
   "keywords": ["realtime", "framework", "websocket", "tcp", "events", "client"],
   "dependencies": {
@@ -14,13 +14,15 @@
   "devDependencies": {
     "mocha": "*",
     "expect.js": "*",
-    "uglify-js": "*"
+    "uglify-js": "*",
+    "component-coffee": "*"
   },
   "contributors": [
     { "name": "Guillermo Rauch", "email": "rauchg@gmail.com" },
     { "name": "Arnout Kazemier", "email": "info@3rd-eden.com" },
     { "name": "Vladimir Dronnikov", "email": "dronnikov@gmail.com" },
-    { "name": "Einar Otto Stangvik", "email": "einaros@gmail.com" }
+    { "name": "Einar Otto Stangvik", "email": "einaros@gmail.com" },
+    { "name": "brian harrison", "email": "brian@rbrian.com" }
   ],
   "component": {
     "scripts": {
